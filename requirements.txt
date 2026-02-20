@@ -1,0 +1,20 @@
+# Core deep learning
+torch>=2.0.0
+torch-geometric>=2.3.0
+
+# Data processing
+numpy>=1.24.0
+pandas>=2.0.0
+pyarrow>=12.0.0  # For parquet files
+
+# Visualization and metrics
+matplotlib>=3.7.0
+seaborn>=0.12.0
+scikit-learn>=1.3.0
+
+# Utilities
+tqdm>=4.65.0
+psutil>=5.9.0
+
+# Optional: for faster data loading
+# numba>=0.57.0
