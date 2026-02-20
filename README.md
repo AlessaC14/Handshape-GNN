@@ -19,7 +19,7 @@ This repository contains code for recognizing handshapes in American Sign Langua
 
 3. **First Benchmark**: Establishes the first dedicated benchmark for handshape recognition as a standalone task
 
-4. **Results**: Achieves **46% accuracy** across 37 handshape classes (baseline: 25%)
+4. **Results**: Achieves **46% accuracy** across 37 handshape classes (baseline on feedforwar network: 25%)
 
 ## Architecture
 
@@ -88,7 +88,7 @@ pip install -r requirements.txt
 
 ### Required Datasets
 
-1. **PopSign**: Download from [PopSign Dataset](https://ai.meta.com/datasets/popsign-dataset/)
+1. **PopSign**: Download from [PopSign Dataset](https://signdata.cc.gatech.edu/view/datasets/popsign_v1_0/index.html)
 2. **ASL-LEX**: Download from [ASL-LEX Database](https://asl-lex.org/)
 
 ### Directory Structure
@@ -171,17 +171,7 @@ python train/train_triple_classifier.py \
     --learning_rate 0.0001
 ```
 
-### Baseline
 
-Train the baseline MLP for comparison:
-
-```bash
-python train/train_baseline.py \
-    --json_path data/merged_dataset.json \
-    --output_dir checkpoints/baseline \
-    --batch_size 32 \
-    --num_epochs 200
-```
 
 ## Evaluation
 
@@ -210,7 +200,7 @@ This will generate:
 
 ### Class Distribution
 
-The dataset contains 37 handshape classes based on the Prosodic model:
+The dataset contains 37 handshape classes with labels provided by ASL-LEX:
 - Most frequent: `open_b` (4,291), `1` (3,872), `5` (2,699)
 - Total samples: 34,533 (27,626 train, 6,907 val)
 
@@ -258,15 +248,12 @@ If you use this code in your research, please cite:
 }
 ```
 
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Acknowledgments
 
-- PopSign dataset by Meta AI
-- ASL-LEX database by Emmorey et al.
-- MediaPipe hand tracking by Google
+- PopSign dataset: https://signdata.cc.gatech.edu/view/datasets/popsign_v1_0/index.html
+- ASL-LEX database by Emmorey et al: https://asl-lex.org/
+- MediaPipe hand tracking by Google: https://ai.google.dev/edge/mediapipe/solutions/guide
 
 ## Contact
 
