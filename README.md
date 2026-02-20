@@ -1,6 +1,7 @@
 # Handshape-GNN: Graph Neural Networks for Sign Language Handshape Recognition
 
-Official implementation of **"Improving Handshape Representations for Sign Language Processing: A Graph Neural Network Approach"** (EMNLP 2025).
+Official implementation of [**"Improving Handshape Representations for Sign Language Processing: A Graph Neural Network Approach"**(link:https://aclanthology.org/2025.emnlp-main.1483/] (EMNLP 2025).
+
 
 [Alessa Carbo](mailto:acarbol1@jh.edu) and [Eric Nalisnick](mailto:nalisnick@jhu.edu)
 Johns Hopkins University
